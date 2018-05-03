@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="utf-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title MyAlert
+        style(type="text/css").
+          @import url('https://fonts.googleapis.com/css?family=Pacifico');
+            button,
+            input {
+                text-transform: uppercase;
+                margin-left: 10px
+            }
+            
+            button,
+            h1,
+            input {
+                margin-left: 10px
+            }
+            
+            body {
+                background: #FFC863;
+                overflow: hidden;
+                height: 100vh;
+                display: flex;
+                font-family: Arial;
+                align-content: center;
+                align-items: center
+            }
+            
+            h1 {
+                font-size: 54px;
+                color: #EF233C;
+                font-family: Pacifico, cursive
+            }
+            
+            input {
+                margin-top: 10px;
+                border: none;
+                height: 40px;
+                width: 280px;
+                padding-left: 10px;
+                padding-right: 10px;
+                border-radius: 5px
+            }
+            
+            button {
+                border: none;
+                height: 50px;
+                margin-top: 15px;
+                width: 300px;
+                border-radius: 5px;
+                background: #EF233C;
+                color: #fff;
+                font-size: 18px;
+                font-weight: 700
+            }
+            
+            button:hover {
+                background: #a00115
+            }
+            
+            .container {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                margin-left: 80px
+            }
+            
+            img {
+                width: 300px;
+            }
+
+            .right {
+              display: flex;
+              align-items: center;
+              align-content:center;
+              justify-content: center;
+            }
+    body
+      .container
+        .left
+          h1 My Alert
+          form(action="/send", method="get")
+              input(type="text", name="code", value="fdh1b3187a", style="display: none")
+              input(type="text", name="title", placeholder="title")
+              input(type="text", name="msg", placeholder="message")
+              br
+              button(type="submit") Send Test
+        .right
+          img(src="https://cdn.pixabay.com/photo/2012/04/01/16/51/pizza-23477_960_720.png")
